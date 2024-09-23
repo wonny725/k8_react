@@ -1,3 +1,14 @@
+.p1 {
+  color: beige;
+  font-weight: bold;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .p1 {
+    animation: App-logo-spin infinite 5s linear;
+  }
+}
+
 .App {
   text-align: center;
 }
