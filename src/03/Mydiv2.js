@@ -1,7 +1,7 @@
 import Mydiv3 from "./Mydiv3";
 // export default function Mydiv2(probs) {
+// parameter 안 object 중괄호 씌워야함
 export default function Mydiv2({ dn1, dn2, dn3 }) {
-  // parameter 안 object 중괄호 씌워야함
   return (
     <div
       className="w-4/6 h-4/6 flex flex-col

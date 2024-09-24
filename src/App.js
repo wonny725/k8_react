@@ -1,7 +1,8 @@
 // import Mydiv1 from "./03/Mydiv1";
 import "./App.css";
 import { IoHomeOutline } from "react-icons/io5";
-import MyList from "./04/MyList";
+// import MyList from "./04/MyList";
+import Lotto from "./05/Lotto";
 function App() {
   return (
     <div
@@ -24,7 +25,8 @@ function App() {
                   overflow-y-auto"
       >
         {/* <Mydiv1 /> */}
-        <MyList />
+        {/* <MyList/> */}
+        <Lotto />
       </main>
       <footer
         className="w-full h-15
