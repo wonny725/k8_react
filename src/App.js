@@ -2,11 +2,12 @@ import "./App.css";
 import { IoHomeOutline } from "react-icons/io5";
 
 // import Mydiv1 from "./01/Hello";
+// import MyClock from "./02/MyClock";
 // import Mydiv1 from "./03/Mydiv1";
 // import MyList from "./04/MyList";
 // import Lotto from "./05/Lotto";
 // import FoodMain from "./06/FoodMain";
-import MyClock from "./02/MyClock";
+import BoxOffice from "./07/BoxOffice";
 function App() {
   return (
     <div
@@ -28,11 +29,12 @@ function App() {
                   flex flex-col items-center
                   overflow-y-auto"
       >
-        <MyClock />
+        {/* <MyClock /> */}
         {/* <Mydiv1 /> */}
         {/* <MyList/> */}
         {/* <Lotto /> */}
         {/* <FoodMain /> */}
+        <BoxOffice />
       </main>
       <footer
         className="w-full h-15
