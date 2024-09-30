@@ -1,7 +1,13 @@
+import MyClockImage from "./MyClockImage";
+import MyClockTime from "./MyClockTime";
+
 function MyClock() {
   return (
     <>
-      <p>MyClock</p>
+      <p>
+        <MyClockImage />
+        <MyClockTime />
+      </p>
     </>
   );
 }

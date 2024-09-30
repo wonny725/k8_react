@@ -31,7 +31,7 @@ export default function MyListItem({ title, content, imgUrl }) {
     <div>
       <div className="w-full h-full border border-gray-300 flex justify-center items-center">
         <div className="w-1/3 flex justify-start items-start">
-          <img src={imgUrl} alt={title}></img>
+          <img src={imgUrl} alt={title} />
         </div>
         <div className="w-2/3 h-full flex flex-col justify-between items-center">
           <div className="w-full flex flex-col h-3/4 justify-start items-start">

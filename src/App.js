@@ -1,8 +1,12 @@
-// import Mydiv1 from "./03/Mydiv1";
 import "./App.css";
 import { IoHomeOutline } from "react-icons/io5";
+
+// import Mydiv1 from "./01/Hello";
+// import Mydiv1 from "./03/Mydiv1";
 // import MyList from "./04/MyList";
-import Lotto from "./05/Lotto";
+// import Lotto from "./05/Lotto";
+// import FoodMain from "./06/FoodMain";
+import MyClock from "./02/MyClock";
 function App() {
   return (
     <div
@@ -21,12 +25,14 @@ function App() {
       </header>
       <main
         className="w-full grow
-                  flex flex-col justify-center items-center
+                  flex flex-col items-center
                   overflow-y-auto"
       >
+        <MyClock />
         {/* <Mydiv1 /> */}
         {/* <MyList/> */}
-        <Lotto />
+        {/* <Lotto /> */}
+        {/* <FoodMain /> */}
       </main>
       <footer
         className="w-full h-15

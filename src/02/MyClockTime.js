@@ -1,7 +1,20 @@
+import { useEffect, useState } from "react";
+
 function MyClockTime() {
-  let today = new Date();
-  today = today.toLocaleString();
-  return "현재시간 : " + today;
+  const [cTime, setCTime] = useState(new Date());
+
+  useEffect(() => {
+    setInterval(() => {
+      setCTime(new Date());
+    }, 1000);
+
+    return clearInterval();
+  }, []);
+  return (
+    <div className="w-full flex justify-center items-center text-2xl font-bold">
+      {cTime.toLocaleString()}
+    </div>
+  );
 }
 
 export default MyClockTime;
