@@ -1,4 +1,4 @@
-export default function TailButton({ caption, color, handleClick }) {
+export default function TailButton({ caption, color, handleClick, size }) {
   const btColor = {
     gray: "bg-slate-500",
     orange: "bg-orange-500",
@@ -13,8 +13,12 @@ export default function TailButton({ caption, color, handleClick }) {
 
   return (
     <button
-      className={`inline-flex justify-center items-center p-3 mx-2
-                    text-s font-bold ${btColor[color]} text-white rounded-md ${btColorHover[color]}`}
+      className={`inline-flex justify-center items-center p-3 mx-2 ${
+        size ? size : ""
+      }
+                    text-s font-bold ${btColor[color]} text-white rounded-md ${
+        btColorHover[color]
+      }`}
       onClick={handleClick}
     >
       {caption}
