@@ -1,18 +1,21 @@
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import { IoHomeOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
-// import Mydiv1 from "./01/Hello";
-// import MyClock from "./02/MyClock";
-// import Mydiv1 from "./03/Mydiv1";
-// import MyList from "./04/MyList";
-// import Lotto from "./05/Lotto";
-// import FoodMain from "./06/FoodMain";
-// import BoxOffice from "./07/BoxOffice";
-// import MyBox from "./08/MyBox";
+import MyClock from "./02/MyClock";
+
+import Lotto from "./05/Lotto";
+import FoodMain from "./06/FoodMain";
+import BoxOffice from "./07/BoxOffice";
+
 // import Traffic from "./09/Traffic";
-// import MyRef from "./10/MyRef";
+
 import Gallery from "./11/Gallery";
+import Festival from "./12/Festival";
+
 function App() {
+  const navigate = useNavigate();
   return (
     <div
       className="w-full xl:w-10/12 h-screen mx-auto
@@ -24,8 +27,54 @@ function App() {
                   bg-slate-200"
       >
         <p className="text-3xl font-bold p-5">React</p>
+        <ul className="flex justify-center items-center text-xl font-bold">
+          <li
+            className="mx-4 p-2 hover:bg-gray-500 hover:text-white rounded-md cursor-pointer"
+            // onClick={() => navigate("/")}
+          >
+            <Link to="/">시계</Link>
+          </li>
+          <li
+            className="mx-4 p-2 hover:bg-gray-500 hover:text-white rounded-md cursor-pointer"
+            onClick={() => navigate("/lotto")}
+          >
+            <Link to="/lotto">로또생성기</Link>
+          </li>
+          <li
+            className="mx-4 p-2 hover:bg-gray-500 hover:text-white rounded-md cursor-pointer"
+            onClick={() => navigate("/foodmain")}
+          >
+            <Link to="/foodmain">푸드뱅크</Link>
+          </li>
+          <li
+            className="mx-4 p-2 hover:bg-gray-500 hover:text-white rounded-md cursor-pointer"
+            onClick={() => navigate("/boxoffice")}
+          >
+            <Link to="/boxoffice">박스오피스</Link>
+          </li>
+          {/* <li
+            className="mx-4 p-2 hover:bg-gray-500 hover:text-white rounded-md cursor-pointer"
+            onClick={() => navigate("/traffic")}
+          >
+            교통사고
+          </li> */}
+          <li
+            className="mx-4 p-2 hover:bg-gray-500 hover:text-white rounded-md cursor-pointer"
+            onClick={() => navigate("/gallery")}
+          >
+            <Link to="/gallery">관광</Link>
+          </li>
+          <li
+            className="mx-4 p-2 hover:bg-gray-500 hover:text-white rounded-md cursor-pointer"
+            onClick={() => navigate("/festival")}
+          >
+            <Link to="/festival">축제</Link>
+          </li>
+        </ul>
         <p className="text-2xl p-5">
-          <IoHomeOutline />
+          <Link to="/">
+            <IoHomeOutline />
+          </Link>
         </p>
       </header>
       <main
@@ -33,21 +82,20 @@ function App() {
                   flex flex-col items-center
                   overflow-y-auto"
       >
-        {/* <MyClock /> */}
-        {/* <Mydiv1 /> */}
-        {/* <MyList/> */}
-        {/* <Lotto /> */}
-        {/* <FoodMain /> */}
-        {/* <BoxOffice /> */}
-        {/* <MyBox /> */}
-        {/* <Traffic /> */}
-        {/* <MyRef /> */}
-        <Gallery />
+        <Routes>
+          <Route path="/" element={<MyClock />} />
+          <Route path="/lotto" element={<Lotto />} />
+          <Route path="/foodmain" element={<FoodMain />} />
+          <Route path="/boxoffice" element={<BoxOffice />} />
+          {/* <Route path="/traffic" element={<Traffic />} /> */}
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/festival" element={<Festival />} />
+        </Routes>
       </main>
       <footer
         className="w-full h-15
                   flex justify-center items-center
-                   bg-black text-white"
+                   bg-slate-200 font-bold"
       >
         <p className="text-xs p-5">정원영</p>
       </footer>
@@ -55,4 +103,12 @@ function App() {
   );
 }
 
-export default App;
+function AppWrapper() {
+  return (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+}
+
+export default AppWrapper;
