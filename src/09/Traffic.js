@@ -49,7 +49,7 @@ export default function Traffic() {
   useEffect(() => {
     console.log(selC1);
     let tm = tdata
-      .filter((item) => item["사고유형대분류"] == selC1)
+      .filter((item) => item["사고유형대분류"] === selC1)
       .map((item) => item["사고유형"]);
 
     // tm = tm.map(item => item['사고유형']) ;
@@ -63,7 +63,7 @@ export default function Traffic() {
     if (!selC2 || !selC2) return;
 
     let tm = tdata.filter(
-      (item) => item["사고유형대분류"] == selC1 && item["사고유형"] == selC2
+      (item) => item["사고유형대분류"] === selC1 && item["사고유형"] === selC2
     );
     tm = tm[0]; //object
 

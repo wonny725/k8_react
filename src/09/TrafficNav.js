@@ -7,7 +7,7 @@ export default function TrafficNav({ title, c, sel, setSel }) {
     <TailButton
       key={item}
       caption={item}
-      color={item == sel ? "orange" : "blue"}
+      color={item === sel ? "orange" : "blue"}
       handleClick={() => handleBtClick(item)}
     />
   ));
