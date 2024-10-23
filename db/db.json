@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "body": "채식주의자",
+      "author": "한강"
+    },
+    {
+      "id": "2",
+      "body": "This is a comment2.",
+      "author": "정원영2"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "This is a comment1.",
+      "author": "정원영"
+    },
+    {
+      "id": "2",
+      "body": "This is a comment2.",
+      "author": "정원영2"
+    }
+  ]
+}

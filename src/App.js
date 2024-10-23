@@ -12,6 +12,8 @@ import Gallery from "./11/Gallery";
 import Festival from "./12/Festival";
 import Fcst from "./14/Fcst";
 import FcstList from "./14/FcstList";
+import RecoilMain from "./15/RecoilMain";
+import Rest from "./16/Rest";
 
 function App() {
   const navigate = useNavigate();
@@ -75,6 +77,12 @@ function App() {
           >
             <Link to="/fcst">일기예보</Link>
           </li>
+          <li
+            className="mx-4 p-2 hover:bg-gray-500 hover:text-white rounded-md cursor-pointer"
+            onClick={() => navigate("/rest")}
+          >
+            <Link to="/rest">rest</Link>
+          </li>
         </ul>
         <p className="text-2xl p-5">
           <Link to="/">
@@ -97,6 +105,8 @@ function App() {
           <Route path="/festival" element={<Festival />} />
           <Route path="/fcst" element={<Fcst />}></Route>
           <Route path="/fcstlist" element={<FcstList />}></Route>
+          <Route path="/recoil" element={<RecoilMain />}></Route>
+          <Route path="/rest" element={<Rest />}></Route>
         </Routes>
       </main>
       <footer
