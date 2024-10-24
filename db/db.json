@@ -1,25 +1,45 @@
 {
   "posts": [
     {
-      "id": "1",
-      "body": "채식주의자",
-      "author": "한강"
+      "title": "채식주의자",
+      "author": "한강",
+      "id": "1"
     },
     {
       "id": "2",
-      "body": "This is a comment2.",
-      "author": "정원영2"
+      "title": "This is a comment.",
+      "author": "정원영"
+    },
+    {
+      "id": "1f22",
+      "title": "천재",
+      "author": "정원영"
+    },
+    {
+      "id": "43ea",
+      "title": "리액트",
+      "author": "재밌다"
+    },
+    {
+      "id": "d211",
+      "title": "자바",
+      "author": "재미없다"
+    },
+    {
+      "title": "소주만병만주소",
+      "author": "05111",
+      "id": "bb01"
     }
   ],
   "comments": [
     {
       "id": "1",
-      "body": "This is a comment1.",
+      "title": "This is a comment1.",
       "author": "정원영"
     },
     {
       "id": "2",
-      "body": "This is a comment2.",
+      "title": "This is a comment2.",
       "author": "정원영2"
     }
   ]
